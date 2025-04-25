@@ -1,11 +1,33 @@
-import { useState } from 'react'
+import {Routes, Route, Link, useNavigate} from 'react-router-dom'
 import './App.css'
 
 function App() {
 
+  console.log('see if this is working');
+
 
   return (
     <>
+    <div className="LoginMain">
+      
+
+      <div className="LoginImage">
+      <h1> Image goes here </h1>
+      </div>
+
+      <div className="LoginForm">
+        <h1> Wake County Public Library </h1>
+        <form>
+          <label> Username <input name="username"></input></label> <br></br>
+          <label> Password <input name="password"></input></label> <br></br>
+          <button> Login </button> <br></br>
+          <p> Create Account </p>
+          <Link to="/books">Browse Books</Link> 
+        </form>
+
+      </div>
+    
+    </div>
       
     </>
   )
