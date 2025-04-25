@@ -1,5 +1,4 @@
 #root {
-  max-width: 1280px;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -18,22 +17,70 @@
 .LoginMain {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 
 .LoginImage {
-  background-color: aqua;
   height: 100%;
   flex: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+.LoginImage img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .LoginForm{
   height: 100%;
-  width: 100%;
+  min-width: 320px;
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: antiquewhite;
+  background-color: #1f4c49;
+  padding: 20px;
+}
+
+.LoginForm h1{
+  color: white;
+}
+
+.LoginForm label{
+  color: white;
+  padding: 20px;
+}
+
+.LoginForm p,a{
+  color: white;
+}
+
+.LoginForm button{
+  margin: 20px;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.booksheader h1{
+  color: #1f4c49;
+}
+
+.books-card{
+  background-color: rgb(241, 247, 244);
+  border-color: #689693;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.books-card:hover{
+  background-color: #689693;
 }

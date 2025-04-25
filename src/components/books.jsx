@@ -33,15 +33,16 @@ function Books() {
       <div className="Background">
   
         
-        <div className="banner"> 
+        <div className="booksheader"> 
           <h1> Wake County Public Library </h1>
         </div> 
   
-      <div className="teams"> 
+      <div className="books"> 
       {books.map((books) => (
             <div key={books.id} className="books-card">
               <h4>{books.title}</h4>
-              <img src={books.coverimage} alt={books.name} style={{ width: "300px" }} />
+              <p>By: {books.author}</p>
+              <img src={books.coverimage} alt={books.name} style={{ width: "100px" }} />
               <br></br>
               <button onClick={() => navigate(`/details/${books.id}`)}>View Details</button>
             </div>

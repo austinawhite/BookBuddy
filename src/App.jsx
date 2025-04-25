@@ -1,5 +1,6 @@
 import {Routes, Route, Link, useNavigate} from 'react-router-dom'
 import './App.css'
+import loginbackground from './assets/loginbackground.svg';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
       
 
       <div className="LoginImage">
-      <h1> Image goes here </h1>
+      <img src={loginbackground} alt="libraryimage"/>
       </div>
 
       <div className="LoginForm">
@@ -22,7 +23,7 @@ function App() {
           <label> Password <input name="password"></input></label> <br></br>
           <button> Login </button> <br></br>
           <p> Create Account </p>
-          <Link to="/books">Browse Books</Link> 
+          <Link to="/books">Browse books without logging in</Link> 
         </form>
 
       </div>
