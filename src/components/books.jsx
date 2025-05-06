@@ -1,5 +1,6 @@
 import {Routes, Route, useNavigate} from 'react-router-dom'
 import { useState, useEffect } from 'react';
+import Nav from './nav.jsx'; 
 
 function Books() {
     const [books, setBooks] = useState([]);
@@ -29,6 +30,8 @@ function Books() {
   
     return (
       <>
+
+      <Nav />
   
       <div className="Background">
   
