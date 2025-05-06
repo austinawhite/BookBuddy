@@ -80,6 +80,12 @@
   font-weight: 500;
 }
 
+.MainMenu a{
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+}
+
 .User {
   position: relative;
   margin-right: 24px;
@@ -134,6 +140,7 @@
 
 .booksheader h1{
   color: #1f4c49;
+  padding: 30px;
 }
 
 .books-card{
@@ -169,4 +176,10 @@
 .details{
   max-width: 600px;
   align-items: center;
+}
+
+/* CSS for Account Page */
+
+.AccountPage{
+  display: flex;
 }
