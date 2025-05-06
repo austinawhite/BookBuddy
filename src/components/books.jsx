@@ -35,12 +35,13 @@ function Books() {
         
         <div className="booksheader"> 
           <h1> Wake County Public Library </h1>
+          <p> Browse our collection of books below. Click on the book to view additional details</p>
         </div> 
   
       <div className="books"> 
       {books.map((books) => (
             <div key={books.id} className="books-card">
-              <h4>{books.title}</h4>
+              <h2>{books.title}</h2>
               <p>By: {books.author}</p>
               <img src={books.coverimage} alt={books.name} style={{ width: "100px" }} />
               <br></br>

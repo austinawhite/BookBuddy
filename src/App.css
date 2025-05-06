@@ -43,6 +43,7 @@
   flex: 1;
   background-color: #1f4c49;
   padding: 20px;
+  align-items: center;
 }
 
 .LoginForm h1{
@@ -79,8 +80,31 @@
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
+  margin: 10px;
+  margin-top: auto;
+  display: flex;
+  height: 400px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.books-card h2, 
+.books-card p{
+  color: #1f4c49;
 }
 
 .books-card:hover{
-  background-color: #689693;
+  background-color: #1f4c49;
+}
+
+.books-card:hover h1,
+.books-card:hover h2,
+.books-card:hover p{
+  color: white;
+}
+
+.details{
+  max-width: 600px;
+  align-items: center;
 }

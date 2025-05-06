@@ -29,8 +29,7 @@ function Details() {
     return (
       <div className="details">
         <h2>{books.title}</h2>
-        <h2> By:</h2>
-        <h2>{books.author} </h2>
+        <h2> By: {books.author} </h2>
         <img src={books.coverimage} alt={books.title} style={{ width: "250px" }} />
         <p>{books.description}</p>
         <p>{books.status}</p>
