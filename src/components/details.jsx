@@ -65,11 +65,16 @@ function Details() {
       <>
       <Nav />
       <div className="details">
+        <div className="bookLeft">
         <h2>{books.title}</h2>
+        <br></br>
         <h2> By: {books.author} </h2>
         <img src={books.coverimage} alt={books.title} style={{ width: "250px" }} />
+        </div>
+        <div className="bookRight">
         <p>{books.description}</p>
         <p>{books.status}</p>
+        
   
         <button onClick={() => navigate(-1)}>
           Return
@@ -79,6 +84,7 @@ function Details() {
             Checkout
             {message && <p>{message}</p>}
         </button>
+        </div>
       </div>
       </>
     )

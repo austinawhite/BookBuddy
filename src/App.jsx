@@ -1,13 +1,11 @@
 import {Routes, Route, Link,} from 'react-router-dom'
 import './App.css'
 import Register from './components/register';
-import login from './assets/login.jpg';
-import { useState} from 'react';
+import login from './assets/login.webp'
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function App() {
-
-  console.log('see if this is working');
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")

@@ -46,6 +46,7 @@ function Books() {
             <div key={books.id} className="books-card">
               <h2>{books.title}</h2>
               <p>By: {books.author}</p>
+              <br></br>
               <img src={books.coverimage} alt={books.name} style={{ width: "100px" }} />
               <br></br>
               <button onClick={() => navigate(`/details/${books.id}`)}>View Details</button>

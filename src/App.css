@@ -29,6 +29,7 @@
   flex: 2;
   align-items: center;
   justify-content: center;
+  background-color: #ebdba7;
 }
 
 .LoginImage img{
@@ -40,6 +41,7 @@
 .LoginForm{
   height: 100%;
   min-width: 320px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -50,6 +52,7 @@
 
 .LoginForm h1{
   color: white;
+  margin: 30px;
 }
 
 .LoginForm label{
@@ -57,8 +60,24 @@
   padding: 20px;
 }
 
-.LoginForm p,a{
+.LoginForm input {
+  width: 300px;
+  margin: 14px;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.LoginForm p{
   color: white;
+  text-decoration: none;
+}
+
+.LoginForm a{
+  color: white;
+  text-decoration: none;
 }
 
 .LoginForm button{
@@ -176,6 +195,78 @@
 .details{
   max-width: 600px;
   align-items: center;
+}
+
+/* CSS for Books Details */
+
+.details {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 40px;
+  padding: 40px;
+  justify-content: center;
+  background-color: #ef7446;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.bookLeft {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ef7446;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.bookLeft h2 {
+  color: white;
+}
+
+.bookLeft img {
+  max-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bookRight {
+  flex: 2 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  align-items: center;
+}
+
+.bookRight h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #1f4c49;
+}
+
+.bookRight p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.bookRight button {
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #1f4c49;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.bookRight button:hover {
+  background-color: #32736c;
 }
 
 /* CSS for Account Page */
