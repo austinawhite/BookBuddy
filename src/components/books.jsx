@@ -4,6 +4,8 @@ import Nav from './nav.jsx';
 
 function Books() {
     const [books, setBooks] = useState([]);
+    const [filteredBooks, setFilteredBooks] = useState([])
+    const [search, setSearch] = useState([])
     const navigate = useNavigate();
   
   
@@ -13,6 +15,7 @@ function Books() {
         const data = await res.json();
         console.log("Data", data);
         setBooks(data);
+        setFilteredBooks(data);
       }
       catch (error) {
         console.error("No books found", error)
@@ -27,7 +30,17 @@ function Books() {
         console.log("Books loaded:", books);
       }, [books]);
       
-  
+  const handleSearch = (e) => {
+    const value = e.target.value
+    setSearch(value)
+
+    const filtered = books.filter(book =>
+      book.title.toLowerCase().includes(value.toLowerCase())
+    )
+
+    setFilteredBooks(filtered)
+  }
+
     return (
       <>
 
@@ -40,9 +53,17 @@ function Books() {
           <h1> Wake County Public Library </h1>
           <p> Browse our collection of books below. Click on the book to view additional details</p>
         </div> 
+
+        <input
+            type="text"
+            placeholder="Search by title"
+            value={search}
+            onChange={handleSearch}
+            style={{ padding: '10px', width: '300px', marginTop: '20px' }}
+          />
   
       <div className="books"> 
-      {books.map((books) => (
+      {filteredBooks.map((books) => (
             <div key={books.id} className="books-card">
               <h2>{books.title}</h2>
               <p>By: {books.author}</p>
